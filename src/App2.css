@@ -24,6 +24,7 @@
     margin: 0 0 16px 0;
     line-height: 1.2;
 }
+
 .processor-main-subtitle {
     font-size: 1.1rem;
     color: #152645;
@@ -954,7 +955,7 @@
             rgba(123, 147, 77, 0.25) 0%,
             rgba(86, 101, 130, 0.25) 50%,
             rgba(123, 147, 77, 0.25) 100%);
-    background-size: 200% 100%;  
+    background-size: 200% 100%;
     border-radius: 6px;
     font-size: 0.95rem;
     font-weight: 500;
@@ -963,6 +964,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     animation: gradientShift 4s ease infinite;
     width: fit-content;
+    color: #F1F3F3;
 }
 @keyframes gradientShift {
 
