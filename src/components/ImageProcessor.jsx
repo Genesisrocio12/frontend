@@ -1,9 +1,11 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useProportionalResize } from '../hooks/useProportionalResize';
 import logoImage from './image/TechResources.png';
 import { useProcessingStates } from '../hooks/useProcessingStates';
 
-const ImageProcessor = ({ onNavigate }) => {
+const ImageProcessor = () => {
+  const navigate = useNavigate();
   const [backgroundRemoval, setBackgroundRemoval] = useState(false);
   const [resize, setResize] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -331,18 +333,20 @@ const ImageProcessor = ({ onNavigate }) => {
             />
           </div>
           <nav className="navigation">
-            <button onClick={() => onNavigate('home')} className="nav-link">
+           <nav className="navigation">
+            <button onClick={() => navigate('/inicio')} className="nav-link">
               Inicio
             </button>
-            <button onClick={() => onNavigate('procesador')} className="nav-link nav-active">
+            <button onClick={() => navigate('/procesador')} className="nav-link nav-active">
               Procesador
             </button>
-            <button onClick={() => onNavigate('ayuda')} className="nav-link">
+            <button onClick={() => navigate('/ayuda')} className="nav-link">
               Ayuda
             </button>
-            <button onClick={() => onNavigate('contacto')} className="nav-link">
+            <button onClick={() => navigate('/contacto')} className="nav-link">
               Contacto
             </button>
+          </nav>
           </nav>
         </div>
       </header>
